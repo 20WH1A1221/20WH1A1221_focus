@@ -1,0 +1,10 @@
+int f=nums[0],g=nums[0],ans=nums[0];
+        for (int i=1;i<nums.size();i++) {
+            int ff=max(f*nums[i],max(g*nums[i],nums[i]));
+            int gg=min(g*nums[i],min(f*nums[i],nums[i]));
+            ans=max(ff,ans); 
+            f=ff;
+            g=gg;
+        } 
+        return ans;
+}
